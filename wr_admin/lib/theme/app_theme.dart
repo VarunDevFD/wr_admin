@@ -4,10 +4,23 @@ import '../utils/borders.dart';
 class AppTheme {
   static const secondaryColor = Color(0xFF34495E);
   static const primaryShadowColor = Color.fromARGB(255, 239, 143, 143);
+  static const white = Colors.white;
+  static const blackShadow = Color.fromARGB(99, 0, 0, 0); 
+  static const primaryCardBgColor = Color.fromARGB(26, 239, 143, 143);
 
   static ThemeData lightTheme = ThemeData(
     primaryColor: Color(0xFFF4C2C2),
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: white,
+    dividerColor: white,
+    iconTheme: IconThemeData(
+      color: secondaryColor,
+    ),
+    cardTheme: CardTheme(
+      elevation: 2,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+    ),
 
     // Global InputDecorationTheme
     inputDecorationTheme: InputDecorationTheme(
