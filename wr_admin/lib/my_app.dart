@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wr_admin/dashboard_sn.dart';
 import 'package:wr_admin/theme/app_theme.dart';
+
+import 'users/users_sn.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       // ),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: DashboardScreen(),
+      home: UsersScreen(),
     );
   }
 }
