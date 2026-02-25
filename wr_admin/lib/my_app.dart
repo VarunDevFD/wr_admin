@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wr_admin/booking/booking_scn.dart';
+import 'package:wr_admin/payments/payment_scn.dart';
 import 'package:wr_admin/theme/app_theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       // ),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: BookingScreen(),
+      home: PaymentScreen(),
     );
   }
 }
