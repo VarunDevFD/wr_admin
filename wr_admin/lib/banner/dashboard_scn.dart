@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wr_admin/items_approval/widgets/dropdown_model.dart'; 
 import 'package:wr_admin/theme/app_theme.dart';
 import 'package:wr_admin/widgets/side_bar_widget.dart';
 
@@ -10,13 +9,6 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
-
-    final List<String> items = [
-      "Select item",
-    ];
-    final List<String> items2 = [
-      "Provider",
-    ];
 
     return Scaffold(
       body: Row(
@@ -82,7 +74,7 @@ class DesktopLayout extends StatelessWidget {
                       width: 20,
                     ),
                     Text(
-                      "Review Management",
+                      "Banner Manager",
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w600,
@@ -138,59 +130,30 @@ class DesktopLayout extends StatelessWidget {
               ),
               Expanded(
                 child: Column(
+                  spacing: 10,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      spacing: 10,
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 50),
-                          padding: EdgeInsets.all(12),
-                          height: 48,
-                          width: 300,
-                          decoration: BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 228, 226, 226),
-                              width: 1,
-                            ),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.search,
-                                color: AppTheme.blackShadow,
-                              ),
-                              Expanded(
-                                child: Text(
-                                  "Search user by name, email and phone",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: AppTheme.blackShadow,
-                                  ),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    AppTheme.lightTheme.primaryColor,
+                                foregroundColor: AppTheme.primaryShadowColor,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
                                 ),
                               ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: DropdownModel(
-                            controller: items[0],
-                            hintText: 'Categorys',
-                            items: items,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: DropdownModel(
-                            controller: items2[0],
-                            hintText: 'Providers',
-                            items: items2,
-                          ),
+                              onPressed: () {},
+                              child: Text(
+                                'Upload Banner',
+                                style: TextStyle(
+                                  color: AppTheme.white,
+                                ),
+                              )),
                         ),
                       ],
                     ),
