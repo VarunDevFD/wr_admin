@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wr_admin/items_approval/items_approval_scn.dart';
-import 'package:wr_admin/providers/providers_scn.dart';
+import 'package:wr_admin/categorys/category_scn.dart';
 import 'package:wr_admin/theme/app_theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       // ),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: ItemApprovalScreen(),
+      home: CategoryScreen(),
     );
   }
 }
