@@ -14,9 +14,7 @@ class LoginScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(
-          child: LoginCardWidget(),
-        ),
+        child: LoginCardWidget(),
       ),
     );
   }
