@@ -5,7 +5,7 @@ class AppTheme {
   static const secondaryColor = Color(0xFF34495E);
   static const primaryShadowColor = Color.fromARGB(255, 239, 143, 143);
   static const white = Colors.white;
-  static const blackShadow = Color.fromARGB(99, 0, 0, 0); 
+  static const blackShadow = Color.fromARGB(99, 0, 0, 0);
   static const primaryCardBgColor = Color.fromARGB(26, 239, 143, 143);
 
   static ThemeData lightTheme = ThemeData(
@@ -36,8 +36,15 @@ class AppTheme {
     ),
 
     textTheme: const TextTheme(
-      bodyMedium: TextStyle(color: Colors.black),
-      titleMedium: TextStyle(fontWeight: FontWeight.w700),
+      bodyLarge: TextStyle(color: secondaryColor),
+      bodyMedium: TextStyle(color: secondaryColor),
+      bodySmall: TextStyle(color: secondaryColor),
+      titleLarge: TextStyle(color: secondaryColor),
+      titleMedium: TextStyle(
+        color: secondaryColor,
+        fontWeight: FontWeight.w700,
+      ),
+      titleSmall: TextStyle(color: secondaryColor),
     ),
   );
 }
