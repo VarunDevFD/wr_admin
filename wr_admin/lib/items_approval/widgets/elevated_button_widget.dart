@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:wr_admin/theme/app_theme.dart';
 
 class ElevatedButtonWidget extends StatelessWidget {
-  const ElevatedButtonWidget({super.key});
+  final String? mainText;
+  const ElevatedButtonWidget({
+    super.key,
+    this.mainText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class ElevatedButtonWidget extends StatelessWidget {
         ),
         onPressed: () {},
         child: Text(
-          "Apply",
+          mainText ?? "Apply",
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w900,
